@@ -1,0 +1,29 @@
+//question
+https://codeforces.com/contest/69/problem/A
+
+//solution in c++
+
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    vector<vector<int>>cordinates(n,vector<int>(3));
+    for(int i=0;i<n;i++){
+        for(int j=0;j<3;j++){
+            cin>>cordinates[i][j];
+        }
+        
+    }
+    int sumX=0,sumY=0,sumZ=0;
+    for(int i=0;i<n;i++){
+        sumX+=cordinates[i][0];
+        sumY+=cordinates[i][1];
+        sumZ+=cordinates[i][2];
+    }
+    if(sumX==0&&sumY==0&&sumZ==0) cout<<"YES";
+    else cout<<"NO";
+    
+}
