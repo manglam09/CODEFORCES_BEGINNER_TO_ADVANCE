@@ -4,7 +4,7 @@
 using namespace std;
 
 int answer(int i, int j) {
-    return abs(i - 2) + abs(j - 2);
+    return abs(i - 2) + abs(j - 2);    //formula to calculate minimum steps = abs(row-2)+abs(col-2)
 }
 
 int main() {
