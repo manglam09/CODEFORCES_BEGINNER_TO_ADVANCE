@@ -1,0 +1,32 @@
+// Online C++ compiler to run C++ program online
+//question
+https://codeforces.com/problemset/problem/271/A
+
+
+
+#include <iostream>
+#include<set>
+using namespace std;
+
+bool check(int year){
+    string s=to_string(year);
+    set<char>ans;
+    for(char c:s){
+        if(ans.count(c)) return false;
+        ans.insert(c);
+    
+      }
+      return true;
+}
+int main() {
+    // Write C++ code here
+   int year;
+   cin>>year;
+   year++;
+   while(!check(year)){
+       year++;
+   }
+   cout<<year<<endl;
+
+    return 0;
+}
