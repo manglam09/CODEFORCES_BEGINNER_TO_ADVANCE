@@ -1,0 +1,35 @@
+//question link
+https://codeforces.com/problemset/problem/80/A
+
+#include <iostream>
+using namespace std;
+
+bool check(int num) {
+    if (num <= 1) return false;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return false;
+    }
+    return true;
+}
+
+int nextPrimes(int num) {
+    int next = num + 1;
+    while (!check(next)) {
+        next++;
+    }
+    return next;
+}
+
+int main() {
+    int prime, nextPrime;
+    cin >> prime >> nextPrime;
+
+    if (nextPrimes(prime) == nextPrime) {
+        cout << "yes" << endl;
+    } else {
+        cout << "no" << endl;
+    }
+
+    return 0;
+}
